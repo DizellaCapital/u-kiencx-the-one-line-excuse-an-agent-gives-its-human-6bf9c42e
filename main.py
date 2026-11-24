@@ -30,7 +30,7 @@ def main():
     if written != LINE:
         print("read-back mismatch", file=sys.stderr)
         return 1
-    print(f"wrote {len(LINE)} characters to {path}")
+    print(f"wrote {len(LINE)} characters ({len(LINE.encode('utf-8'))} bytes) to {path}")
     return 0
 
 
